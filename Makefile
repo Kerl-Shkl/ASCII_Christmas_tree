@@ -36,9 +36,11 @@ _HFILES := $(wildcard $(HPATH)/*.h)
 _OFILES := $(patsubst $(SRCPATH)/%.c, $(OBJPATH)/%.o, $(_CFILES))
 
 $(OBJPATH)/%.o: $(SRCPATH)/%.c
+	mkdir -p $(OBJPATH)
 	$(CC) -c $< -o $@ 
 
 $(BINPATH)/$(BINNAME): $(_OFILES)
+	mkdir -p $(BINPATH)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 .PHONY: all clean build
