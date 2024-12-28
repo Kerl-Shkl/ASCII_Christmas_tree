@@ -14,6 +14,11 @@ for assembly.
     make
     bin/Tree
 
+Or in docker
+
+    docker build -t gift .
+    docker run -it gift
+
 ## Screenshots
 
 ![Christmas_tree](https://github.com/Kerl-Shkl/ASCII_Christmas_tree/assets/113191549/46160c8a-d4ca-45ba-a163-35649a59440c)
